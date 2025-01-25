@@ -56,13 +56,13 @@ BATCH_SIZE = 50
 training_data = training_data.repeat().shuffle(amount_training_data).batch(BATCH_SIZE)
 test_data = test_data.batch(amount_test_data)
 
-histry = model.fit(training_data, epochs = 6, steps_per_epoch = math.ceil(amount_training_data / BATCH_SIZE))
+history = model.fit(training_data, epochs = 6, steps_per_epoch = math.ceil(amount_training_data / BATCH_SIZE))
 test_loss, test_accuracy = model.evaluate(test_data)
 
 # Print the accuracy and loss of the model
 figure, axis = plt.subplots(1, 2)
 
-axis[0].plot(histry.history['accuracy'])
+axis[0].plot(history.history['accuracy'])
 axis[0].set_title('Model accuracy')
 axis[0].set_ylabel('Accuracy')
 axis[0].set_xlabel('Epoch')
