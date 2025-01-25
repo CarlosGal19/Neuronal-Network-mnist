@@ -68,7 +68,7 @@ axis[0].set_ylabel('Accuracy')
 axis[0].set_xlabel('Epoch')
 axis[0].legend(['Train', 'Test'], loc='upper left')
 
-axis[1].plot(histry.history['loss'])
+axis[1].plot(history.history['loss'])
 axis[1].set_title('Model loss')
 axis[1].set_ylabel('Loss')
 axis[1].set_xlabel('Epoch')
