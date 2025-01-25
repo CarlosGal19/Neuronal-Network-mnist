@@ -1,0 +1,4 @@
+tensorflow
+tfds-nightly
+matplotlib
+opencv-python
